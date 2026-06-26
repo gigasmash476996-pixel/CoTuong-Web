@@ -8,9 +8,9 @@ const PIECE_LABELS = {
 };
 
 const AI_LEVEL_LABELS = {
-  poor: 'Gà mờ (Depth 2)',
-  medium: 'Trung bình (Depth 3 + Khai cuộc)',
-  smart: 'Thông minh (Depth 4)'
+  poor: 'Tìm kiếm nông (Depth 2)',
+  medium: 'Tìm kiếm vừa (Depth 3)',
+  smart: 'Tìm kiếm sâu (Depth 4)'
 };
 
 const SAVE_FILE_VERSION = 1;
@@ -342,13 +342,13 @@ export default function App() {
         </div>
 
         <div className="field-group">
-          <label className="field-label" htmlFor="ai-level">Độ khó AI</label>
+          <label className="field-label" htmlFor="ai-level">Độ sâu tìm kiếm của AI</label>
           <select id="ai-level" value={draftAiLevel} onChange={(event) => setDraftAiLevel(event.target.value)}>
-            <option value="poor">AI Gà mờ (Depth 2)</option>
-            <option value="medium">AI Trung bình (Depth 3 + Khai cuộc)</option>
-            <option value="smart">AI Thông minh (Depth 4)</option>
+            <option value="poor">Tìm kiếm nông (Depth 2)</option>
+            <option value="medium">Tìm kiếm vừa (Depth 3)</option>
+            <option value="smart">Tìm kiếm sâu (Depth 4)</option>
           </select>
-          <span className="field-hint">Các tùy chọn này sẽ áp dụng khi bạn bắt đầu một ván mới.</span>
+          <span className="field-hint">Độ sâu càng lớn, AI đánh càng hay nhưng suy nghĩ càng lâu.</span>
         </div>
 
         <div className="setup-primary-actions">
